@@ -15,18 +15,15 @@ class FirstViewController: UIViewController {
     @IBOutlet var thirdField: UITextField!
     @IBOutlet var fourthField: UITextField!
     @IBOutlet var totalLabel: UILabel!
-    @IBOutlet var myPicker: UIPickerView!
-    @IBOutlet var myTextField: UITextField!
-    var pickerData: [String] = [String]()
-
+    let someResolution = MyLinkedList()
+    @IBOutlet var enter: UITextField!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
-    }
+        }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,6 +43,15 @@ class FirstViewController: UIViewController {
         let duration = number1! + number2! + number3! + number4!
         
         totalLabel.text = "\(duration)"
+    }
+    
+    @IBAction func createReceipt(sender: AnyObject) {
+        
+        MyLinkedList().addItem(enter.text!)
+        MyLinkedList().insertItem(enter.text!, position: 0)
+        print(MyLinkedList().head.value)
+        print("The list size : ",  MyLinkedList().count)
+        print("The list contains: " , MyLinkedList().printList())
     }
     
 }

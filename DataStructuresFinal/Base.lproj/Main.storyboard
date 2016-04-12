@@ -27,7 +27,7 @@
                                     <rect key="frame" x="166" y="248" width="32" height="30"/>
                                     <state key="normal" title="Next"/>
                                     <connections>
-                                        <segue destination="R7L-Xp-PP4" kind="show" id="q1r-mN-920"/>
+                                        <segue destination="R7L-Xp-PP4" kind="show" id="8TH-PL-bgS"/>
                                     </connections>
                                 </button>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-u4-b8i">
@@ -82,12 +82,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH1-GD-O7K" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="79" y="88" width="138" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xtm-KI-ieG">
                                 <rect key="frame" x="236" y="296" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -134,7 +128,7 @@
                                 <rect key="frame" x="341" y="414" width="63" height="30"/>
                                 <state key="normal" title="Compute"/>
                                 <connections>
-                                    <action selector="compute:" destination="R7L-Xp-PP4" eventType="touchUpInside" id="MAU-Z9-3Ln"/>
+                                    <action selector="compute:" destination="R7L-Xp-PP4" eventType="touchUpInside" id="IHa-1G-Ejw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miscellaneous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFu-xk-UJu">
@@ -168,20 +162,26 @@
                                     <segue destination="Pt2-6e-chf" kind="presentation" id="Uen-5e-K6h"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH1-GD-O7K" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="79" y="88" width="138" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="firstField" destination="96Q-76-Eud" id="N6d-lu-A2d"/>
-                        <outlet property="fourthField" destination="N1X-cS-GJr" id="PpE-z2-qrF"/>
-                        <outlet property="secondField" destination="J8U-Fe-xEN" id="cNr-4c-eYY"/>
-                        <outlet property="thirdField" destination="Xtm-KI-ieG" id="3Sp-oC-FVa"/>
-                        <outlet property="totalLabel" destination="TP0-r1-mRD" id="YX4-p3-hZd"/>
+                        <outlet property="firstField" destination="96Q-76-Eud" id="3z0-sT-tqj"/>
+                        <outlet property="fourthField" destination="N1X-cS-GJr" id="AlN-au-IwT"/>
+                        <outlet property="secondField" destination="J8U-Fe-xEN" id="Ybj-Lu-6Rv"/>
+                        <outlet property="thirdField" destination="Xtm-KI-ieG" id="KFE-3u-C7W"/>
+                        <outlet property="totalLabel" destination="TP0-r1-mRD" id="zGS-cG-WHH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lD-LO-LGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6" y="750"/>
+            <point key="canvasLocation" x="158" y="594"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="07Y-bs-2DS">
@@ -202,48 +202,44 @@
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose today's date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDn-Wa-7dk">
-                                <rect key="frame" x="128" y="54" width="157" height="21"/>
+                                <rect key="frame" x="139" y="54" width="157" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-c2-4c7">
-                                <rect key="frame" x="174" y="372" width="102" height="30"/>
-                                <state key="normal" title="Create Receipt"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scc-0d-EtO">
-                                <rect key="frame" x="155" y="416" width="141" height="30"/>
+                                <rect key="frame" x="155" y="342" width="141" height="30"/>
                                 <state key="normal" title="Return to dashboard"/>
                                 <connections>
                                     <segue destination="Pt2-6e-chf" kind="show" id="dGf-IU-RPv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter $$" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kO-TI-KXC">
-                                <rect key="frame" x="352" y="274" width="97" height="30"/>
+                                <rect key="frame" x="187" y="250" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="createReceipt:" destination="e4o-Lg-Gea" eventType="editingDidEnd" id="lwm-fM-VJW"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXx-qK-Snz">
-                                <rect key="frame" x="379" y="239" width="42" height="21"/>
+                                <rect key="frame" x="204" y="221" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter $$" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7K1-8h-aOm">
-                                <rect key="frame" x="352" y="274" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8d-F8-CeM">
-                                <rect key="frame" x="120" y="231" width="195" height="116"/>
-                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-c2-4c7">
+                                <rect key="frame" x="174" y="295" width="102" height="30"/>
+                                <state key="normal" title="Create Receipt"/>
+                                <connections>
+                                    <action selector="createReceipt:" destination="e4o-Lg-Gea" eventType="touchUpInside" id="bjn-WN-yFg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="myLabel" destination="NXx-qK-Snz" id="pJl-Tx-TAL"/>
-                        <outlet property="myPicker" destination="H8d-F8-CeM" id="eJU-bG-f5z"/>
-                        <outlet property="myTextField" destination="7K1-8h-aOm" id="zdz-rL-ejF"/>
+                        <outlet property="enter" destination="6kO-TI-KXC" id="VRI-qf-0SM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGl-Oa-DM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -253,7 +249,6 @@
         <!--First View Controller-->
         <scene sceneID="qTH-bn-D38">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mGZ-pR-7ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Pt2-6e-chf" customClass="FirstViewController" customModule="DataStructuresFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BM3-n9-sfr"/>
@@ -275,11 +270,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Where did your money go?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AA0-pS-8Jx">
-                                <rect key="frame" x="106" y="187" width="194" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlv-Zt-RDN">
                                 <rect key="frame" x="106" y="285" width="84" height="30"/>
                                 <state key="normal" title="Add Receipt"/>
@@ -289,12 +279,18 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Where did your money go?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AA0-pS-8Jx">
+                                <rect key="frame" x="106" y="187" width="194" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGZ-pR-7ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="1445"/>
+            <point key="canvasLocation" x="1418" y="1469"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
