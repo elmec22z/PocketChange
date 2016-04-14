@@ -15,7 +15,9 @@ class MyLinkedList<T:NSObject> {
     var head: Node<T> = Node<T>()
     var tail: Node<T> = Node<T>()
     
-    init() {
+    init()
+    {
+        
     }
     
     func isEmpty() -> Bool {
@@ -146,6 +148,11 @@ class MyLinkedList<T:NSObject> {
         }
         output += "]"
         print(output)
+    }
+    
+    func getSize() -> Int
+    {
+        return count
     }
     
 }

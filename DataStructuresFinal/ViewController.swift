@@ -10,13 +10,18 @@ import UIKit
 
 class FirstViewController: UIViewController {
     //MARKS: Fields
+    
+    
+    
     @IBOutlet var firstField: UITextField!
     @IBOutlet var secondField: UITextField!
     @IBOutlet var thirdField: UITextField!
     @IBOutlet var fourthField: UITextField!
     @IBOutlet var totalLabel: UILabel!
-    let someResolution = MyLinkedList()
     @IBOutlet var enter: UITextField!
+    let myList = MyLinkedList<NSString>()
+   // @IBOutlet var receipt: UITextField!
+    @IBOutlet var display: UILabel!
     
 
     override func viewDidLoad() {
@@ -46,12 +51,12 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func createReceipt(sender: AnyObject) {
-        
-        MyLinkedList().addItem(enter.text!)
-        MyLinkedList().insertItem(enter.text!, position: 0)
-        print(MyLinkedList().head.value)
-        print("The list size : ",  MyLinkedList().count)
-        print("The list contains: " , MyLinkedList().printList())
+
+     //   myList.addItem(enter.text!)
+        print("The list size : ",  myList.getSize())
+        myList.printList()
+        display.text! = String(myList.addItem(enter.text!))
+    
     }
     
 }
