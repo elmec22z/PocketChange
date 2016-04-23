@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cMo-qu-3oP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cMo-qu-3oP">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Welcome Screen-->
@@ -27,14 +27,6 @@
                                     <color key="textColor" red="0.59803091639999995" green="1" blue="0.30061399220000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-u4-b8i">
-                                    <rect key="frame" x="237" y="121" width="97" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="97" id="iQY-mk-cGG"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ahg-iQ-D3o">
                                     <rect key="frame" x="210" y="317" width="150" height="2"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,6 +43,14 @@
                                         <segue destination="R7L-Xp-PP4" kind="show" id="8TH-PL-bgS"/>
                                     </connections>
                                 </button>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-u4-b8i">
+                                    <rect key="frame" x="237" y="132" width="97" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="97" id="iQY-mk-cGG"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
                             </subviews>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -344,7 +344,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="q98-Q4-E8P"/>
+        <segue reference="Uen-5e-K6h"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.51442159679999999" blue="0.48496353089999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
