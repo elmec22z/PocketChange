@@ -15,6 +15,7 @@
 		3E27D0CC1CB1AC1900C7450C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E27D0CA1CB1AC1900C7450C /* LaunchScreen.storyboard */; };
 		3E27D0D71CB1AC1900C7450C /* DataStructuresFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E27D0D61CB1AC1900C7450C /* DataStructuresFinalTests.swift */; };
 		3E27D0E21CB1AC1900C7450C /* DataStructuresFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E27D0E11CB1AC1900C7450C /* DataStructuresFinalUITests.swift */; };
+		3EC2B69F1CCC099B00D11267 /* PocketChangeFinal in Resources */ = {isa = PBXBuildFile; fileRef = 3EC2B69E1CCC099B00D11267 /* PocketChangeFinal */; };
 		3ED3C4CB1CBD431000684B94 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED3C4C91CBD431000684B94 /* LinkedList.swift */; };
 		3ED3C4CC1CBD431000684B94 /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED3C4CA1CBD431000684B94 /* LinkedListNode.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		3E27D0DD1CB1AC1900C7450C /* DataStructuresFinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructuresFinalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E27D0E11CB1AC1900C7450C /* DataStructuresFinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructuresFinalUITests.swift; sourceTree = "<group>"; };
 		3E27D0E31CB1AC1900C7450C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EC2B69E1CCC099B00D11267 /* PocketChangeFinal */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PocketChangeFinal; path = ../../../PocketChangeFinal; sourceTree = "<group>"; };
 		3ED3C4C91CBD431000684B94 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		3ED3C4CA1CBD431000684B94 /* LinkedListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedListNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 		3E27D0B21CB1AC1800C7450C = {
 			isa = PBXGroup;
 			children = (
+				3EC2B69E1CCC099B00D11267 /* PocketChangeFinal */,
 				3E27D0BD1CB1AC1800C7450C /* DataStructuresFinal */,
 				3E27D0D51CB1AC1900C7450C /* DataStructuresFinalTests */,
 				3E27D0E01CB1AC1900C7450C /* DataStructuresFinalUITests */,
@@ -244,6 +247,7 @@
 				3E27D0CC1CB1AC1900C7450C /* LaunchScreen.storyboard in Resources */,
 				3E27D0C91CB1AC1900C7450C /* Assets.xcassets in Resources */,
 				3E27D0C41CB1AC1900C7450C /* Main.storyboard in Resources */,
+				3EC2B69F1CCC099B00D11267 /* PocketChangeFinal in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

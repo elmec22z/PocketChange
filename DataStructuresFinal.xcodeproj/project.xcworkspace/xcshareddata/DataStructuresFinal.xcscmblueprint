@@ -1,28 +1,30 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9FB345F98016A6EF7559324410209D6B9854ED05",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2342367455C9732FECD47B4EFA15DC322038706E+++A00D886",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "9FB345F98016A6EF7559324410209D6B9854ED05" : 0
+    "2342367455C9732FECD47B4EFA15DC322038706E+++A00D886" : 0,
+    "9FB345F98016A6EF7559324410209D6B9854ED05+++D49BF5A" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "93B44B7C-2D96-457D-98ED-4840ABCACE33",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "9FB345F98016A6EF7559324410209D6B9854ED05" : ".."
+    "2342367455C9732FECD47B4EFA15DC322038706E+++A00D886" : "..",
+    "9FB345F98016A6EF7559324410209D6B9854ED05+++D49BF5A" : ".."
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "DataStructuresFinal",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DataStructuresFinal.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/elmec22z\/BudgetApp.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9FB345F98016A6EF7559324410209D6B9854ED05"
-    },
-    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/elmec22z\/PocketChange.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9FB345F98016A6EF7559324410209D6B9854ED05"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2342367455C9732FECD47B4EFA15DC322038706E+++A00D886"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/elmec22z\/BudgetApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9FB345F98016A6EF7559324410209D6B9854ED05+++D49BF5A"
     }
   ]
 }
