@@ -278,7 +278,7 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="enter" destination="6kO-TI-KXC" id="4hc-nR-ddd"/>
+                        <outlet property="enter" destination="6kO-TI-KXC" id="Zea-vy-ryT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGl-Oa-DM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,17 +303,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlv-Zt-RDN">
-                                <rect key="frame" x="254" y="20" width="119" height="37"/>
-                                <state key="normal" title="Add Receipts">
-                                    <color key="titleColor" red="0.59803091639999995" green="1" blue="0.30061399220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="e4o-Lg-Gea" kind="popoverPresentation" popoverAnchorView="Wlv-Zt-RDN" id="9Nb-Jh-XUi">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receipts Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOR-j4-Zzt">
                                 <rect key="frame" x="148" y="121" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -326,6 +315,17 @@
                                     <color key="titleColor" red="0.59803091639999995" green="1" blue="0.30061399220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlv-Zt-RDN">
+                                <rect key="frame" x="159" y="76" width="119" height="37"/>
+                                <state key="normal" title="Add Receipts">
+                                    <color key="titleColor" red="0.59803091639999995" green="1" blue="0.30061399220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="e4o-Lg-Gea" kind="popoverPresentation" popoverAnchorView="Wlv-Zt-RDN" id="9Nb-Jh-XUi">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -335,7 +335,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="display" destination="TOR-j4-Zzt" id="xZr-lF-To5"/>
+                        <outlet property="display" destination="TOR-j4-Zzt" id="qBY-Wt-615"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGZ-pR-7ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -344,7 +344,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Uen-5e-K6h"/>
+        <segue reference="q98-Q4-E8P"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.51442159679999999" blue="0.48496353089999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

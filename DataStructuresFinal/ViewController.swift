@@ -52,10 +52,12 @@ class FirstViewController: UIViewController {
     @IBAction func createReceipt(sender: AnyObject) {
 
        // myList.addItem(enter.text!)
-        print("The list size : ",  myList.getSize())
-        myList.printList()
-        
-        display.text = myList.addItem(enter.text!)
+        //print("The list size : ",  myList.getSize())
+       // myList.printList()
+        myList.addItem(enter.text!)
+        for _ in 0...myList.count {
+        display.text! = enter.text!
+        }
     
     }
     
