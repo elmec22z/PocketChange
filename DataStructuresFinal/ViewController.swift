@@ -20,7 +20,6 @@ class FirstViewController: UIViewController {
     @IBOutlet var totalLabel: UILabel!
     @IBOutlet var enter: UITextField!
     let myList = MyLinkedList<NSString>()
-   // @IBOutlet var receipt: UITextField!
     @IBOutlet var display: UILabel!
     
 
@@ -52,10 +51,11 @@ class FirstViewController: UIViewController {
     
     @IBAction func createReceipt(sender: AnyObject) {
 
-     //   myList.addItem(enter.text!)
+       // myList.addItem(enter.text!)
         print("The list size : ",  myList.getSize())
         myList.printList()
-        display.text! = String(myList.addItem(enter.text!))
+        
+        display.text = myList.addItem(enter.text!)
     
     }
     
