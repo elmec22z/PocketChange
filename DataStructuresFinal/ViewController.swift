@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     //MARKS: Fields
     
     
@@ -21,11 +21,14 @@ class FirstViewController: UIViewController {
     @IBOutlet var enter: UITextField!
     let myList = MyLinkedList<NSString>()
     @IBOutlet var display: UILabel!
-    
+    var Array = [ "Shopping", "Travel", "Movies", "Miscellaneous"]
+    @IBOutlet var myPicker: UIPickerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       //myPicker.dataSource = self
+       // myPicker.delegate = self
         
         }
     
@@ -60,7 +63,16 @@ class FirstViewController: UIViewController {
         }
     
     }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Array[row];
+    }
     
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Array.count
+    }
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1;
+    }
 }
 
 
