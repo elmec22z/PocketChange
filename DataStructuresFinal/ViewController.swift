@@ -85,8 +85,8 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         placementAnswer = row
         print (row)
-       // value = Array[row]
-       // print("values:----------\(value)");
+        value = Array[row]
+        print("values:----------\(value)");
     }
     
 }
