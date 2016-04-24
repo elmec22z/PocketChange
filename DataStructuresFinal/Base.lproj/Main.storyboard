@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cMo-qu-3oP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cMo-qu-3oP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,16 +17,6 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="400"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Pocket Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bb-cy-hWU">
-                                    <rect key="frame" x="179" y="65" width="243" height="48"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="48" id="67Q-r0-ZiF"/>
-                                        <constraint firstAttribute="width" constant="243" id="IvP-QK-X92"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.59803091639999995" green="1" blue="0.30061399220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-u4-b8i">
                                     <rect key="frame" x="237" y="121" width="97" height="30"/>
                                     <constraints>
@@ -51,6 +41,16 @@
                                         <segue destination="R7L-Xp-PP4" kind="show" id="8TH-PL-bgS"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Pocket Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bb-cy-hWU">
+                                    <rect key="frame" x="164" y="60" width="243" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="67Q-r0-ZiF"/>
+                                        <constraint firstAttribute="width" constant="243" id="IvP-QK-X92"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.59803091639999995" green="1" blue="0.30061399220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -218,20 +218,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bq3-TQ-beb">
-                                <rect key="frame" x="91" y="112" width="234" height="101"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <date key="date" timeIntervalSinceReferenceDate="481937672.09100902">
-                                    <!--2016-04-09 23:34:32 +0000-->
-                                </date>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scc-0d-EtO">
-                                <rect key="frame" x="138" y="388" width="141" height="30"/>
+                                <rect key="frame" x="133" y="444" width="141" height="30"/>
                                 <state key="normal" title="Return to dashboard">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Pt2-6e-chf" kind="show" id="q98-Q4-E8P"/>
+                                    <action selector="receipt:" destination="e4o-Lg-Gea" eventType="touchUpInside" id="Mla-s1-mxP"/>
+                                    <segue destination="Pt2-6e-chf" kind="showDetail" id="ve4-mY-BML"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kO-TI-KXC">
@@ -242,15 +236,6 @@
                                     <action selector="createReceipt:" destination="e4o-Lg-Gea" eventType="editingDidEnd" id="lwm-fM-VJW"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-c2-4c7">
-                                <rect key="frame" x="157" y="350" width="102" height="30"/>
-                                <state key="normal" title="Create Receipt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="createReceipt:" destination="e4o-Lg-Gea" eventType="touchUpInside" id="bjn-WN-yFg"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much did you spend?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXx-qK-Snz">
                                 <rect key="frame" x="107" y="221" width="203" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -263,27 +248,46 @@
                                 <color key="textColor" red="0.0025112761650234461" green="0.99980384111404419" blue="0.88306480646133423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1D9-dn-uCY">
-                                <rect key="frame" x="91" y="312" width="234" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Receipts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDn-Wa-7dk">
                                 <rect key="frame" x="138" y="62" width="141" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCa-m4-ZuH">
+                                <rect key="frame" x="70" y="318" width="276" height="85"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="e4o-Lg-Gea" id="Kh8-ag-lWq"/>
+                                    <outlet property="delegate" destination="e4o-Lg-Gea" id="CVP-jy-o6N"/>
+                                </connections>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bq3-TQ-beb">
+                                <rect key="frame" x="91" y="112" width="234" height="101"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <date key="date" timeIntervalSinceReferenceDate="481937672.09100902">
+                                    <!--2016-04-09 23:34:32 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-c2-4c7">
+                                <rect key="frame" x="157" y="419" width="102" height="30"/>
+                                <state key="normal" title="Create Receipt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createReceipt:" destination="e4o-Lg-Gea" eventType="touchUpInside" id="bjn-WN-yFg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="enter" destination="6kO-TI-KXC" id="Zea-vy-ryT"/>
+                        <outlet property="myPicker" destination="DCa-m4-ZuH" id="M3k-HO-KtQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGl-Oa-DM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-927" y="920"/>
+            <point key="canvasLocation" x="-859" y="948"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="qTH-bn-D38">
@@ -303,12 +307,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receipts Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOR-j4-Zzt">
-                                <rect key="frame" x="148" y="121" width="121" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTB-Xi-alm">
                                 <rect key="frame" x="150" y="92" width="119" height="30"/>
                                 <state key="normal" title="Delete Receipts">
@@ -326,6 +324,15 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHS-gK-RCJ">
+                                <rect key="frame" x="148" y="121" width="141" height="30"/>
+                                <state key="normal" title="Display Receipts">
+                                    <color key="titleColor" red="0.42722952365875244" green="0.8919709324836731" blue="0.43146681785583496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hV0-Qf-cEN" kind="show" id="NP0-n1-M08"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -334,13 +341,28 @@
                             <constraint firstItem="Wlv-Zt-RDN" firstAttribute="top" secondItem="BM3-n9-sfr" secondAttribute="bottom" constant="49" id="ZMp-4H-fOm"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="display" destination="TOR-j4-Zzt" id="qBY-Wt-615"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGZ-pR-7ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-72" y="941"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dAQ-8x-pVg">
+            <objects>
+                <viewController id="hV0-Qf-cEN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rfp-4g-Y4I"/>
+                        <viewControllerLayoutGuide type="bottom" id="dJf-7T-6Si"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LAL-sb-Owz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gp-za-4et" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="954"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     //MARKS: Fields
     
     
@@ -19,14 +19,26 @@ class FirstViewController: UIViewController {
     @IBOutlet var fourthField: UITextField!
     @IBOutlet var totalLabel: UILabel!
     @IBOutlet var enter: UITextField!
-    let myList = MyLinkedList<NSString>()
+    let shoppingList = MyLinkedList<NSString>()
+    let miscList = MyLinkedList<NSString>()
+    let travelList = MyLinkedList<NSString>()
+    let foodList = MyLinkedList<NSString>()
     @IBOutlet var display: UILabel!
+    @IBOutlet var myPicker: UIPickerView!
+    var Array = [ "Shopping", "Travel", "Movies", "Miscellaneous"]
+    var placementAnswer = 0
+    var value = ""
     
-
+   
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    
+        myPicker = UIPickerView()
+        myPicker.dataSource = self
+        myPicker.delegate = self
+
         }
     
     override func didReceiveMemoryWarning() {
@@ -51,14 +63,28 @@ class FirstViewController: UIViewController {
     
     @IBAction func createReceipt(sender: AnyObject) {
 
-       // myList.addItem(enter.text!)
-        //print("The list size : ",  myList.getSize())
-       // myList.printList()
-        myList.addItem(enter.text!)
-        for _ in 0...myList.count {
-        display.text! = enter.text!
+       
+        shoppingList.addItem(enter.text!)
+        //for _ in 0...myList.count {
+        //display.text! = enter.text!
         }
     
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Array[row];
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Array.count
+    }
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1;
+    }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        placementAnswer = row
+        print (row)
+       // value = Array[row]
+       // print("values:----------\(value)");
     }
     
 }
