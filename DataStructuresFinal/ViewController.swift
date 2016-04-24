@@ -19,7 +19,10 @@ class FirstViewController: UIViewController {
     @IBOutlet var fourthField: UITextField!
     @IBOutlet var totalLabel: UILabel!
     @IBOutlet var enter: UITextField!
-    let myList = MyLinkedList<NSString>()
+    let shoppingList = MyLinkedList<NSString>()
+    let miscList = MyLinkedList<NSString>()
+    let travelList = MyLinkedList<NSString>()
+    let foodList = MyLinkedList<NSString>()
     @IBOutlet var display: UILabel!
     
 
@@ -51,12 +54,10 @@ class FirstViewController: UIViewController {
     
     @IBAction func createReceipt(sender: AnyObject) {
 
-       // myList.addItem(enter.text!)
-        //print("The list size : ",  myList.getSize())
-       // myList.printList()
-        myList.addItem(enter.text!)
-        for _ in 0...myList.count {
-        display.text! = enter.text!
+       
+        shoppingList.addItem(enter.text!)
+        //for _ in 0...myList.count {
+        //display.text! = enter.text!
         }
     
     }
