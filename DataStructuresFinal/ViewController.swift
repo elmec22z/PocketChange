@@ -24,15 +24,21 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     let travelList = MyLinkedList<NSString>()
     let foodList = MyLinkedList<NSString>()
     @IBOutlet var display: UILabel!
-    var Array = [ "Shopping", "Travel", "Movies", "Miscellaneous"]
     @IBOutlet var myPicker: UIPickerView!
-
+    var Array = [ "Shopping", "Travel", "Movies", "Miscellaneous"]
+    var placementAnswer = 0
+    var value = ""
+    
+   
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       //myPicker.dataSource = self
-       // myPicker.delegate = self
-        
+    
+        myPicker = UIPickerView()
+        myPicker.dataSource = self
+        myPicker.delegate = self
+
         }
     
     override func didReceiveMemoryWarning() {
@@ -74,6 +80,13 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1;
     }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        placementAnswer = row
+        print (row)
+       // value = Array[row]
+       // print("values:----------\(value)");
+    }
+    
 }
 
 

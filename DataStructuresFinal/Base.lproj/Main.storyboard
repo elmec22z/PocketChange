@@ -224,7 +224,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Pt2-6e-chf" kind="show" id="q98-Q4-E8P"/>
+                                    <action selector="receipt:" destination="e4o-Lg-Gea" eventType="touchUpInside" id="Mla-s1-mxP"/>
+                                    <segue destination="Pt2-6e-chf" kind="showDetail" id="ve4-mY-BML"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kO-TI-KXC">
@@ -235,15 +236,6 @@
                                     <action selector="createReceipt:" destination="e4o-Lg-Gea" eventType="editingDidEnd" id="lwm-fM-VJW"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-c2-4c7">
-                                <rect key="frame" x="157" y="419" width="102" height="30"/>
-                                <state key="normal" title="Create Receipt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="createReceipt:" destination="e4o-Lg-Gea" eventType="touchUpInside" id="bjn-WN-yFg"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much did you spend?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXx-qK-Snz">
                                 <rect key="frame" x="107" y="221" width="203" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -266,6 +258,7 @@
                                 <rect key="frame" x="70" y="318" width="276" height="85"/>
                                 <connections>
                                     <outlet property="dataSource" destination="e4o-Lg-Gea" id="Kh8-ag-lWq"/>
+                                    <outlet property="delegate" destination="e4o-Lg-Gea" id="CVP-jy-o6N"/>
                                 </connections>
                             </pickerView>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bq3-TQ-beb">
@@ -275,6 +268,15 @@
                                     <!--2016-04-09 23:34:32 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-c2-4c7">
+                                <rect key="frame" x="157" y="419" width="102" height="30"/>
+                                <state key="normal" title="Create Receipt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createReceipt:" destination="e4o-Lg-Gea" eventType="touchUpInside" id="bjn-WN-yFg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -285,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGl-Oa-DM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-927" y="920"/>
+            <point key="canvasLocation" x="-859" y="948"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="qTH-bn-D38">
