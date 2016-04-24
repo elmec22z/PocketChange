@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cMo-qu-3oP">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Welcome Screen-->
@@ -280,7 +280,7 @@
                     </view>
                     <connections>
                         <outlet property="enter" destination="6kO-TI-KXC" id="Zea-vy-ryT"/>
-                        <outlet property="myPicker" destination="DCa-m4-ZuH" id="VeQ-cP-Hq4"/>
+                        <outlet property="myPicker" destination="DCa-m4-ZuH" id="M3k-HO-KtQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGl-Oa-DM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -364,7 +364,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Uen-5e-K6h"/>
+        <segue reference="q98-Q4-E8P"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.51442159679999999" blue="0.48496353089999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
