@@ -31,18 +31,19 @@ class SecondViewController: UIViewController {
         
         if let s = shoppingList.head.value {
             var sum = 0
-            for i in 1 ..< shoppingList.count  {
+            for i in 0 ..< shoppingList.count  {
                 //let v = shoppingList.head.value
                 print("i is equal to ", i)
+                
                 let label: UILabel = UILabel()
-                label.frame = CGRectMake(100, 150 + CGFloat(i), 90, 21)
+                label.frame = CGRectMake(130, 150 + CGFloat(sum), 90, 21)
                 label.backgroundColor = UIColor.orangeColor()
                 label.textColor = UIColor.blackColor()
                 label.textAlignment = NSTextAlignment.Center
                 label.text =  s as String
                 self.view.addSubview(label)
-                sum += 1
-                shoppingList.head.next?.value
+                sum += 21
+                
                 
             }
         }   else   {
@@ -52,17 +53,17 @@ class SecondViewController: UIViewController {
         //print("The head is : ", shoppingList.head.value)
         if let s = miscList.head.value {
             var sum = 0
-            for i in 0 ..< miscList.count  {
+            for i in 1 ..< miscList.count  {
                 //let v = shoppingList.head.value
                 print("i is equal to ", i)
                 miscList.head.next?.value
-                let label: UILabel = UILabel()
-                label.frame = CGRectMake(50, 150 + CGFloat(i), 90, 21)
-                label.backgroundColor = UIColor.orangeColor()
-                label.textColor = UIColor.blackColor()
-                label.textAlignment = NSTextAlignment.Center
-                label.text =  s as String
-                self.view.addSubview(label)
+                let miscLabel: UILabel = UILabel()
+                miscLabel.frame = CGRectMake(100, 300 + CGFloat(i), 90, 21)
+                miscLabel.backgroundColor = UIColor.orangeColor()
+                miscLabel.textColor = UIColor.blackColor()
+                miscLabel.textAlignment = NSTextAlignment.Center
+                miscLabel.text =  s as String
+                self.view.addSubview(miscLabel)
                 sum += 1
             }
         }   else   {
@@ -72,12 +73,12 @@ class SecondViewController: UIViewController {
         //print("The head is : ", shoppingList.head.value)
         if let s = travelList.head.value {
             var sum = 0
-            for i in 0 ..< travelList.count  {
+            for i in 1 ..< travelList.count  {
                 //let v = shoppingList.head.value
                 print("i is equal to ", i)
                 travelList.head.next?.value
                 let label: UILabel = UILabel()
-                label.frame = CGRectMake(50, 150 + CGFloat(i), 90, 21)
+                label.frame = CGRectMake(200, 150 + CGFloat(i), 90, 21)
                 label.backgroundColor = UIColor.orangeColor()
                 label.textColor = UIColor.blackColor()
                 label.textAlignment = NSTextAlignment.Center
@@ -92,12 +93,12 @@ class SecondViewController: UIViewController {
         //print("The head is : ", shoppingList.head.value)
         if let s = moviesList.head.value {
             var sum = 0
-            for i in 0 ..< moviesList.count  {
+            for i in 1 ..< moviesList.count  {
                 //let v = shoppingList.head.value
                 print("i is equal to ", i)
                 moviesList.head.next?.value
                 let label: UILabel = UILabel()
-                label.frame = CGRectMake(50, 150 + CGFloat(i), 90, 21)
+                label.frame = CGRectMake(200, 300 + CGFloat(i), 90, 21)
                 label.backgroundColor = UIColor.orangeColor()
                 label.textColor = UIColor.blackColor()
                 label.textAlignment = NSTextAlignment.Center
