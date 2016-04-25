@@ -31,18 +31,19 @@ class SecondViewController: UIViewController {
         
         if let s = shoppingList.head.value {
             var sum = 0
-            for i in 0 ..< shoppingList.count  {
+            for i in 1 ..< shoppingList.count  {
                 //let v = shoppingList.head.value
                 print("i is equal to ", i)
-                shoppingList.head.next?.value
                 let label: UILabel = UILabel()
-                label.frame = CGRectMake(50, 150 + CGFloat(i), 200, 21)
+                label.frame = CGRectMake(100, 150 + CGFloat(i), 90, 21)
                 label.backgroundColor = UIColor.orangeColor()
                 label.textColor = UIColor.blackColor()
                 label.textAlignment = NSTextAlignment.Center
                 label.text =  s as String
                 self.view.addSubview(label)
                 sum += 1
+                shoppingList.head.next?.value
+                
             }
         }   else   {
             print("ll nil")
@@ -51,12 +52,12 @@ class SecondViewController: UIViewController {
         //print("The head is : ", shoppingList.head.value)
         if let s = miscList.head.value {
             var sum = 0
-            for i in 0 ..< shoppingList.count  {
+            for i in 0 ..< miscList.count  {
                 //let v = shoppingList.head.value
                 print("i is equal to ", i)
                 miscList.head.next?.value
                 let label: UILabel = UILabel()
-                label.frame = CGRectMake(0, 150 + CGFloat(i), 100, 21)
+                label.frame = CGRectMake(50, 150 + CGFloat(i), 90, 21)
                 label.backgroundColor = UIColor.orangeColor()
                 label.textColor = UIColor.blackColor()
                 label.textAlignment = NSTextAlignment.Center
@@ -74,9 +75,9 @@ class SecondViewController: UIViewController {
             for i in 0 ..< travelList.count  {
                 //let v = shoppingList.head.value
                 print("i is equal to ", i)
-                miscList.head.next?.value
+                travelList.head.next?.value
                 let label: UILabel = UILabel()
-                label.frame = CGRectMake(100, 300 + CGFloat(i), 100, 21)
+                label.frame = CGRectMake(50, 150 + CGFloat(i), 90, 21)
                 label.backgroundColor = UIColor.orangeColor()
                 label.textColor = UIColor.blackColor()
                 label.textAlignment = NSTextAlignment.Center
@@ -94,9 +95,9 @@ class SecondViewController: UIViewController {
             for i in 0 ..< moviesList.count  {
                 //let v = shoppingList.head.value
                 print("i is equal to ", i)
-                miscList.head.next?.value
+                moviesList.head.next?.value
                 let label: UILabel = UILabel()
-                label.frame = CGRectMake(50, 150 + CGFloat(i), 200, 21)
+                label.frame = CGRectMake(50, 150 + CGFloat(i), 90, 21)
                 label.backgroundColor = UIColor.orangeColor()
                 label.textColor = UIColor.blackColor()
                 label.textAlignment = NSTextAlignment.Center
