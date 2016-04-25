@@ -11,7 +11,7 @@ import UIKit
 class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     //MARKS: Fields
     
-    
+   // var array: [Int]!
     
     @IBOutlet var firstField: UITextField!
     @IBOutlet var secondField: UITextField!
@@ -25,6 +25,16 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var Array = [ "Shopping", "Travel", "Movies", "Miscellaneous"]
     var placementAnswer = 0
     var value = ""
+    let shoppingList = MyLinkedList<NSString>()
+    let miscList = MyLinkedList<NSString>()
+    let travelList = MyLinkedList<NSString>()
+    let moviesList = MyLinkedList<NSString>()
+    //var listArray: [MyLinkedList] = [miscList,foodList,travelList]
+    
+    @IBAction func display(sender: AnyObject) {
+    }
+    
+    
     
    
    
@@ -63,12 +73,27 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         // myList.addItem(enter.text!)
         //print("The list size : ",  myList.getSize())
         // myList.printList()
-        myList.addItem(enter.text!)
-        print(myList.printList())
-        myList.addItem(String(placementAnswer))
-        print("The answer", myList.printList())
-        //let string = myList.head
-        //display.text = string
+        if(placementAnswer==0)
+        {
+            shoppingList.addItem(enter.text!)
+        }
+        else if(placementAnswer==1)
+        {
+            travelList.addItem(enter.text!)
+        }
+        else if(placementAnswer==2)
+        {
+            moviesList.addItem(enter.text!)
+        }
+        else{
+            miscList.addItem(enter.text!)
+        }
+        
+        print("Shopping",shoppingList.printList())
+        print("Miscellaneous",miscList.printList())
+        print("Travel",travelList.printList())
+        print("Movies",moviesList.printList())
+
         
 
     }
@@ -88,6 +113,18 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         value = Array[row]
         print("values:----------\(value)");
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        // Create a new variable to store the instance of PlayerTableViewController
+        let secondViewController = segue.destinationViewController as! SecondViewController
+        secondViewController.shoppingList = shoppingList
+        secondViewController.miscList = miscList
+        secondViewController.travelList = shoppingList
+        secondViewController.moviesList = miscList
+        
+    }
+    
+    
     
 }
 
