@@ -19,7 +19,10 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet var fourthField: UITextField!
     @IBOutlet var totalLabel: UILabel!
     @IBOutlet var enter: UITextField!
-    let myList = MyLinkedList<NSString>()
+    let shoppingList = MyLinkedList<NSString>()
+    let miscList = MyLinkedList<NSString>()
+    let travelList = MyLinkedList<NSString>()
+    let foodList = MyLinkedList<NSString>()
     @IBOutlet var display: UILabel!
     @IBOutlet var myPicker: UIPickerView!
     var Array = [ "Shopping", "Travel", "Movies", "Miscellaneous"]
@@ -60,17 +63,12 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBAction func createReceipt(sender: AnyObject) {
 
-        // myList.addItem(enter.text!)
-        //print("The list size : ",  myList.getSize())
-        // myList.printList()
-        myList.addItem(enter.text!)
-        print(myList.printList())
-        myList.addItem(String(placementAnswer))
-        print("The answer", myList.printList())
-        //let string = myList.head
-        //display.text = string
-        
-
+       
+        shoppingList.addItem(enter.text!)
+        //for _ in 0...myList.count {
+        //display.text! = enter.text!
+        }
+    
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Array[row];
