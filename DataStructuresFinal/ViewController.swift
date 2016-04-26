@@ -25,8 +25,11 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var Array = [ "Shopping", "Travel", "Movies", "Miscellaneous"]
     var placementAnswer = 0
     var value = ""
-    
-   
+
+    let shoppingList = MyLinkedList<NSString>()
+    let miscList = MyLinkedList<NSString>()
+    let travelList = MyLinkedList<NSString>()
+    let moviesList = MyLinkedList<NSString>()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,16 +63,11 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBAction func createReceipt(sender: AnyObject) {
 
-        // myList.addItem(enter.text!)
-        //print("The list size : ",  myList.getSize())
-        // myList.printList()
+    
         myList.addItem(enter.text!)
         print(myList.printList())
         myList.addItem(String(placementAnswer))
-        print("The answer", myList.printList())
-        //let string = myList.head
-        //display.text = string
-        
+        print("The answer", myList.printList())  
 
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -88,6 +86,17 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         value = Array[row]
         print("values:----------\(value)");
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        // Create a new variable to store the instance of PlayerTableViewController
+        let secondViewController = segue.destinationViewController as! SecondViewController
+        secondViewController.shoppingList = shoppingList
+        secondViewController.miscList = miscList
+        secondViewController.travelList = shoppingList
+        secondViewController.moviesList = miscList
+        
+    }
+
     
 }
 
