@@ -18,13 +18,8 @@ class SecondViewController: UIViewController {
     var moviesList = MyLinkedList<NSString>()
     
     
-    //@IBOutlet var label: UILabel!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //display.text = String(shoppingList.head.value)
         
         // Do any additional setup after loading the view.
         
@@ -32,9 +27,6 @@ class SecondViewController: UIViewController {
         if let s = shoppingList.head.value {
             var sum = 0
             for i in 0 ..< shoppingList.count  {
-                //let v = shoppingList.head.value
-                print("i is equal to ", i)
-                
                 let label: UILabel = UILabel()
                 label.frame = CGRectMake(130, 150 + CGFloat(sum), 90, 21)
                 label.backgroundColor = UIColor.orangeColor()
@@ -43,11 +35,12 @@ class SecondViewController: UIViewController {
                 label.text =  s as String
                 self.view.addSubview(label)
                 sum += 21
-                
-                
             }
+            
         }   else   {
+            
             print("ll nil")
+            
         }
         
         //print("The head is : ", shoppingList.head.value)
